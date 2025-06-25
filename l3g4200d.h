@@ -9,8 +9,9 @@ typedef struct {
     l3g4200d_interface_t interface;
 } l3g4200d_t;
 
-l3g4200d_err_t
-l3g4200d_initialize(l3g4200d_t* l3g4200d, l3g4200d_config_t const* config, l3g4200d_interface_t const* interface);
+l3g4200d_err_t l3g4200d_initialize(l3g4200d_t* l3g4200d,
+                                   l3g4200d_config_t const* config,
+                                   l3g4200d_interface_t const* interface);
 l3g4200d_err_t l3g4200d_deinitialize(l3g4200d_t* l3g4200d);
 
 l3g4200d_err_t l3g4200d_get_gyro_data_x_scaled(l3g4200d_t const* l3g4200d, float32_t* scaled);
@@ -56,28 +57,41 @@ l3g4200d_err_t l3g4200d_get_out_z_reg(l3g4200d_t const* l3g4200d, l3g4200d_out_z
 
 l3g4200d_err_t l3g4200d_get_out_reg(l3g4200d_t const* l3g4200d, l3g4200d_out_reg_t* reg);
 
-l3g4200d_err_t l3g4200d_get_fifo_ctrl_reg(l3g4200d_t const* l3g4200d, l3g4200d_fifo_ctrl_reg_t* reg);
-l3g4200d_err_t l3g4200d_set_fifo_ctrl_reg(l3g4200d_t const* l3g4200d, l3g4200d_fifo_ctrl_reg_t const* reg);
+l3g4200d_err_t l3g4200d_get_fifo_ctrl_reg(l3g4200d_t const* l3g4200d,
+                                          l3g4200d_fifo_ctrl_reg_t* reg);
+l3g4200d_err_t l3g4200d_set_fifo_ctrl_reg(l3g4200d_t const* l3g4200d,
+                                          l3g4200d_fifo_ctrl_reg_t const* reg);
 
 l3g4200d_err_t l3g4200d_get_fifo_src_reg(l3g4200d_t const* l3g4200d, l3g4200d_fifo_src_reg_t* reg);
-l3g4200d_err_t l3g4200d_set_fifo_src_reg(l3g4200d_t const* l3g4200d, l3g4200d_fifo_src_reg_t const* reg);
+l3g4200d_err_t l3g4200d_set_fifo_src_reg(l3g4200d_t const* l3g4200d,
+                                         l3g4200d_fifo_src_reg_t const* reg);
 
 l3g4200d_err_t l3g4200d_get_int1_cfg_reg(l3g4200d_t const* l3g4200d, l3g4200d_int1_cfg_reg_t* reg);
-l3g4200d_err_t l3g4200d_set_int1_cfg_reg(l3g4200d_t const* l3g4200d, l3g4200d_int1_cfg_reg_t const* reg);
+l3g4200d_err_t l3g4200d_set_int1_cfg_reg(l3g4200d_t const* l3g4200d,
+                                         l3g4200d_int1_cfg_reg_t const* reg);
 
 l3g4200d_err_t l3g4200d_get_int1_src_reg(l3g4200d_t const* l3g4200d, l3g4200d_int1_src_reg_t* reg);
-l3g4200d_err_t l3g4200d_set_int1_src_reg(l3g4200d_t const* l3g4200d, l3g4200d_int1_src_reg_t const* reg);
+l3g4200d_err_t l3g4200d_set_int1_src_reg(l3g4200d_t const* l3g4200d,
+                                         l3g4200d_int1_src_reg_t const* reg);
 
-l3g4200d_err_t l3g4200d_get_int1_ths_x_reg(l3g4200d_t const* l3g4200d, l3g4200d_int1_ths_x_reg_t* reg);
-l3g4200d_err_t l3g4200d_set_int1_ths_x_reg(l3g4200d_t const* l3g4200d, l3g4200d_int1_ths_x_reg_t const* reg);
+l3g4200d_err_t l3g4200d_get_int1_ths_x_reg(l3g4200d_t const* l3g4200d,
+                                           l3g4200d_int1_ths_x_reg_t* reg);
+l3g4200d_err_t l3g4200d_set_int1_ths_x_reg(l3g4200d_t const* l3g4200d,
+                                           l3g4200d_int1_ths_x_reg_t const* reg);
 
-l3g4200d_err_t l3g4200d_get_int1_ths_y_reg(l3g4200d_t const* l3g4200d, l3g4200d_int1_ths_y_reg_t* reg);
-l3g4200d_err_t l3g4200d_set_int1_ths_y_reg(l3g4200d_t const* l3g4200d, l3g4200d_int1_ths_y_reg_t const* reg);
+l3g4200d_err_t l3g4200d_get_int1_ths_y_reg(l3g4200d_t const* l3g4200d,
+                                           l3g4200d_int1_ths_y_reg_t* reg);
+l3g4200d_err_t l3g4200d_set_int1_ths_y_reg(l3g4200d_t const* l3g4200d,
+                                           l3g4200d_int1_ths_y_reg_t const* reg);
 
-l3g4200d_err_t l3g4200d_get_int1_ths_z_reg(l3g4200d_t const* l3g4200d, l3g4200d_int1_ths_z_reg_t* reg);
-l3g4200d_err_t l3g4200d_set_int1_ths_z_reg(l3g4200d_t const* l3g4200d, l3g4200d_int1_ths_z_reg_t const* reg);
+l3g4200d_err_t l3g4200d_get_int1_ths_z_reg(l3g4200d_t const* l3g4200d,
+                                           l3g4200d_int1_ths_z_reg_t* reg);
+l3g4200d_err_t l3g4200d_set_int1_ths_z_reg(l3g4200d_t const* l3g4200d,
+                                           l3g4200d_int1_ths_z_reg_t const* reg);
 
-l3g4200d_err_t l3g4200d_get_int1_duration_reg(l3g4200d_t const* l3g4200d, l3g4200d_int1_duration_reg_t* reg);
-l3g4200d_err_t l3g4200d_set_int1_duration_reg(l3g4200d_t const* l3g4200d, l3g4200d_int1_duration_reg_t const* reg);
+l3g4200d_err_t l3g4200d_get_int1_duration_reg(l3g4200d_t const* l3g4200d,
+                                              l3g4200d_int1_duration_reg_t* reg);
+l3g4200d_err_t l3g4200d_set_int1_duration_reg(l3g4200d_t const* l3g4200d,
+                                              l3g4200d_int1_duration_reg_t const* reg);
 
 #endif // L3G4200D_L3G4200D_H
