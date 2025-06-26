@@ -4,10 +4,8 @@ target_sources(l3g4200d PRIVATE
     "l3g4200d.c"
 )
 
-target_include_directories(l3g4200d PUBLIC 
-)
-
-target_link_libraries(l3g4200d PRIVATE
+target_include_directories(l3g4200d PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 target_compile_options(l3g4200d PUBLIC
