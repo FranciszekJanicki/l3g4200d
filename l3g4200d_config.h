@@ -57,9 +57,9 @@ typedef enum {
 } l3g4200d_reg_addr_t;
 
 typedef enum {
-    L3G4200D_DEV_ADDR_SD0_LOW = 0b1101000,
-    L3G4200D_DEV_ADDR_SD0_HIGH = 0b1101001,
-} l3g4200d_dev_addr_t;
+    L3G4200D_SLAVE_ADDRESS_SD0_LOW = 0b1101000,
+    L3G4200D_SLAVE_ADDRESS_SD0_HIGH = 0b1101001,
+} l3g4200d_slave_address_t;
 
 typedef enum {
     L3G4200D_MODE_BYPASS,
