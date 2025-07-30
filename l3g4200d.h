@@ -4,6 +4,10 @@
 #include "l3g4200d_config.h"
 #include "l3g4200d_registers.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
     l3g4200d_config_t config;
     l3g4200d_interface_t interface;
@@ -128,5 +132,9 @@ l3g4200d_err_t l3g4200d_get_int1_duration_reg(
 l3g4200d_err_t l3g4200d_set_int1_duration_reg(
     l3g4200d_t const* l3g4200d,
     l3g4200d_int1_duration_reg_t const* reg);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // L3G4200D_L3G4200D_H

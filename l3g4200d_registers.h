@@ -3,6 +3,10 @@
 
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
     uint8_t who_am_i : 8;
 } l3g4200d_who_am_i_reg_t;
@@ -130,5 +134,9 @@ typedef struct {
     uint8_t wait : 1;
     uint8_t d : 7;
 } l3g4200d_int1_duration_reg_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // L3G4200D_L3G4200D_REGISTERS_H

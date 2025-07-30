@@ -5,6 +5,10 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define L3G4200D_DEVICE_ID 0b11010011
 
 typedef float float32_t;
@@ -132,5 +136,9 @@ inline float32_t l3g4200d_range_to_scale(l3g4200d_full_scale_range_t range)
             return 0.0F;
     }
 }
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // L3G4200D_L3G4200D_CONFIG_H
